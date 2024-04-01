@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify2Mp3</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="/static/image.png" class="img">
+    </div>
+    <h1>Spotify2Mp3</h1>
+
+    <!-- Description Section -->
+    <section id="description">
+        <h2>How Spotify2Mp3 Works: </h2>
+        <p>Spotify2Mp3 is a tool that allows you to convert Spotify playlists into MP3 files for offline listening. Here's how it works:</p>
+        <ol>
+            <li>Enter the link to your Spotify playlist in the form provided.</li>
+            <li>Click the "Submit" button to initiate the conversion process.</li>
+            <li>Spotify2Mp3 will extract the song details from your playlist and search for them on YouTube.</li>
+            <li>Once found, it downloads the audio tracks from YouTube in MP3 format.</li>
+            <li>Then on the bottom-left links of the songs will appear, you can simply click on it to store it on your device.</li>
+        </ol>
+        <p>Enjoy your favorite Spotify playlists offline with Spotify2Mp3!</p>
+    </section>
+
+    <!-- Playlist Form -->
+    <form id="playlist-form">
+        <label for="playlist-link">Enter Playlist Link:</label><br>
+        <input type="text" id="playlist-link" name="playlist_link"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Progress Section -->
+    <div id="progress">
+        <!-- Progress will be shown here -->
+    </div>
+
+    <!-- Downloads Section -->
+    <div id="downloads">
+        <!-- Download links will be appended here -->
+    </div>
+
+    <script src="{{ url_for('static', path='script.js') }}"></script>
+</body>
+</html>
